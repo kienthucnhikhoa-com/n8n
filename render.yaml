@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: n8n-kienthucnhikhoa
+    env: docker
+    plan: free
+    region: singapore
+    repo: https://github.com/kienthucnhikhoa-com/n8n
+    branch: master
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
+    envVars:
+      - key: N8N_BASIC_AUTH_ACTIVE
+        value: "true"
+      - key: N8N_BASIC_AUTH_USER
+        value: "kienthucnhikhoa.com"
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: "KienThucNhiKhoa@Adsense.szv.vn@2034."
+      - key: N8N_HOST
+        value: "0.0.0.0"
+      - key: N8N_PORT
+        value: "5678"
+      - key: WEBHOOK_URL
+        value: "https://n8n-kienthucnhikhoa-com.onrender.com"
+      - key: GENERIC_TIMEZONE
+        value: "Asia/Ho_Chi_Minh"
